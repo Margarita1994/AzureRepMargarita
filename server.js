@@ -1,12 +1,18 @@
 var http = require("http"),
 port = process.env.PORT || 1337,
     server;
+app = express();
 
-server = http.createServer(function (req, res) {
-    res.writeHead(200, {"Content-Type": "text/plain"});
-    res.end("Hello World!\n");
-});
+// настроим статическую файловую папку
 
-server.listen (port);
+// для маршрута по умолчанию
+
+// (см. также замечание о маршрутах далее)
+
+app.use(express.static(__dirname + "/client"));
+
+// создадим HTTP-сервер на базе Express
+
+http.createServer(app).listen(port);
 
 console.log("Server running on port 3000");
