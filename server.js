@@ -8,7 +8,7 @@ toDos = [];
 
 
 
-app.use(express.urlencoded());
+//app.use(express.urlencoded());
 app.use(express.static(__dirname + "/client"));
 
 // создадим HTTP-сервер на базе Express
@@ -20,13 +20,13 @@ res.json(coolObject);
 
 
 
-app.post("/todos", function (req, res) {
-  // сейчас объект сохраняется в req.body
-  var newToDo = req.body;
-  console.log(newToDo);
-  toDos.push(newToDo);
-  // отправляем простой объект
-  res.json({"message":"Вы разместили данные на сервере!"});
-});
+// app.post("/todos", function (req, res) {
+//   // сейчас объект сохраняется в req.body
+//   var newToDo = req.body;
+//   console.log(newToDo);
+//   toDos.push(newToDo);
+//   // отправляем простой объект
+//   res.json({"message":"Вы разместили данные на сервере!"});
+// });
 
 console.log("Server running on port 3000");
