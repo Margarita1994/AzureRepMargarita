@@ -4,7 +4,7 @@ express = require("express"),
 server,
 coolObject = new Object(my: 12345),
 app = express(),
-toDos = {"hello world"};
+toDos = [];
 
 
 
