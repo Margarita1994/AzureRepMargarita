@@ -15,10 +15,15 @@ var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
 
 var someObject ={};
 
-
+setInterval(function () {
+    $.getJSON("/someway.json", function (fromServer) {
+    // Сейчас "fromServer" становится объектом, возвращаемым маршрутом someway.json
+    console.log(fromServer);
+	});
+  }, 5000);
 
 var Clake = function() {
-	$.post("todos", someObject, function (response) {
+	$.post("/todos", someObject, function (response) {
     // это обратный вызов, выполняется при ответе сервера
     console.log("Получение данных с сервера");
     console.log(response);

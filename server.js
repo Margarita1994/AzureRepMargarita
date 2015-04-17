@@ -3,22 +3,18 @@ port = process.env.PORT || 1337,
 express = require("express"),
 server,
 coolObject = new Object(my: 12345),
-app = express();
+app = express(),
+toDos = {"hello world"};
 
 
-setInterval(function () {
-    $.getJSON("/someway.json", function (fromServer) {
-    // Сейчас "fromServer" становится объектом, возвращаемым маршрутом someway.json
-    console.log(fromServer);
-	});
-  }, 5000);
+
 
 app.use(express.static(__dirname + "/client"));
 
 // создадим HTTP-сервер на базе Express
 http.createServer(app).listen(port);
 
-/*app.get("/someway.json", function (req, res) {
+app.get("/someway.json", function (req, res) {
 res.json(coolObject);
 });
 
@@ -31,6 +27,6 @@ app.post("/todos", function (req, res) {
   toDos.push(newToDo);
   // отправляем простой объект
   res.json({"message":"Вы разместили данные на сервере!"});
-});*/
+});
 
 console.log("Server running on port 3000");
