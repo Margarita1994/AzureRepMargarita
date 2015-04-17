@@ -7,7 +7,7 @@ port = process.env.PORT || 1337;
 var coolObject = {my: 12345};
 var toDos = [];
 
-app.use(express.urlencoded());
+//app.use(express.urlencoded());
 app.use(express.static(__dirname + "/client"));
 
 // создадим HTTP-сервер на базе Express
