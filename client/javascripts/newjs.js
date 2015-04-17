@@ -5,23 +5,29 @@ return num*num;
 });
 
 
-
-var main = function () 
-{
+var main = function () {
 "use strict";
-
-var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
-
-"tags=dogs&format=json&jsoncallback=?";
-
-$.getJSON(url, function (flickrResponse) {
-
-
-
-});
 
 var $photo;
 var $IMGcom;
+var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
+"tags=dogs&format=json&jsoncallback=?";
+
+var someObject ={};
+
+
+
+var Clake = function() {
+	$.post("todos", someObject, function (response) {
+    // это обратный вызов, выполняется при ответе сервера
+    console.log("Получение данных с сервера");
+    console.log(response);
+    });
+};
+
+
+
+
 
 $.getJSON(url, function (flickrResponse) {
 flickrResponse.items.forEach(function (photo) {
@@ -108,6 +114,7 @@ addCommentFromInputBox();
 
  $(".comment-input button").on("click", function (event) {
     addCommentFromInputBox();
+    Clake();
   });
 
 
@@ -140,4 +147,5 @@ if (event.keyCode === 13)
 };
 
 	};
+
 $(document).ready(main);
