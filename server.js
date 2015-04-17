@@ -1,10 +1,10 @@
-var http = require("http"),
-port = process.env.PORT || 1337,
-express = require("express"),
-coolObject = new Object(my: 12345),
-app = express();
+var express = require("express"),
+app = express(),
+http = require("http"),
+port = process.env.PORT || 1337;
 
 
+var coolObject = new Object(my: 12345);
 var toDos = [];
 
 //app.use(express.urlencoded());
