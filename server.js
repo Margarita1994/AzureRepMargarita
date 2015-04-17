@@ -4,7 +4,7 @@ http = require("http"),
 port = process.env.PORT || 1337;
 
 
-var coolObject = new Object(my: 12345);
+var coolObject = {my: 12345};
 var toDos = [];
 
 //app.use(express.urlencoded());
