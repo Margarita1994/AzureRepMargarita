@@ -119,7 +119,7 @@ addCommentFromInputBox();
 
  $(".comment-input button").on("click", function (event) {
     addCommentFromInputBox();
-    //Clake();
+    Clake();
   });
 
 
