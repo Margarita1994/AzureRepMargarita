@@ -5,7 +5,7 @@ port = process.env.PORT || 1337;
 
 
 var coolObject = {my: 12345};
-var toDos = [];
+var toDos = [1,3,5];
 
 //app.use(express.urlencoded());
 app.use(express.static(__dirname + "/client"));
