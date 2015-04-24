@@ -1,5 +1,6 @@
 var express = require("express"),
 app = express(),
+stream = require("./stream.js"),
 http = require("http"),
 port = process.env.PORT || 1337;
 
@@ -14,7 +15,7 @@ app.use(express.static(__dirname + "/client"));
 http.createServer(app).listen(port);
 
  app.get("/someway.json", function (req, res) {
-res.json(coolObject);
+res.json(stream);
 });
 
 

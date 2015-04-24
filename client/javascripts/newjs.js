@@ -95,6 +95,9 @@ $(".tabs a:nth-child(1)").on("click", function ()
     
 		if(tabnumber===1)
 		{
+var cloud = sun();
+$(" main .content").prepend($("<p>").text(cloud));
+
 		
 		}
 			else if (tabnumber===2)
