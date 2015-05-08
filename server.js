@@ -4,34 +4,36 @@ stream = require("./stream.js"),
 http = require("http"),
 port = process.env.PORT || 1337;
 
-var CommSchema = mongoose.Schema({
+var mongoose= require('mongoose');
+var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
+mongoose.connect(connectionString);
+
+var CommSchema = mongoose.Schema
+({
 
 "title" : String,
 
 "commentariy" : String
 
 });
+
 var com1 = mongoose.model("Comm", CommSchema);
 
 var c1 = new Comm({"title":"Doggie", "commentariy":"goodie"})
 
 //Сохранение в хранилище
 
+
 c1.save(function (err) {
 
 if (err !== null) {
-
-// объект не был сохранен
-
 console.log(err);
-
 } else {
-
 console.log("Объект не был сохранен!");
-
 }
 
 });
+
 Comm.find({"title" : "bad"}, function (err, comments) {
 
 comments.forEach(function (com) {
