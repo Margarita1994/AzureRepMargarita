@@ -132,6 +132,7 @@ $(" main .content").prepend($("<p>").text(cloud));
 if (event.keyCode === 13) 
 	{
 addCommentFromInputBox();
+Clake();
 	}
 });
 
