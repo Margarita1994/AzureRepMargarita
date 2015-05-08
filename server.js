@@ -19,10 +19,7 @@ var CommSchema = mongoose.Schema
 
 var com1 = mongoose.model("Comm", CommSchema);
 
-var c1 = new Comm({"title":"Doggie", "commentariy":"goodie"})
-
-//Сохранение в хранилище
-
+var c1 = new Comm({"title":"Doggie", "commentariy":"goodie"});
 
 c1.save(function (err) {
 
