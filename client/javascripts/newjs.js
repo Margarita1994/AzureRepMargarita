@@ -12,6 +12,7 @@ var $photo;
 var $IMGcom;
 var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
 "tags=dogs&format=json&jsoncallback=?";
+var someAppOne11object;
 
 var someObject ={};
 
@@ -30,6 +31,20 @@ var Clake = function() {
     });
 };
 
+
+
+
+var sun = function () {
+//
+var tweet = $.getJSON("/someway.json", function sun(fromServer) {
+
+someAppOne11object = fromServer;
+});
+
+//}, 5000);
+return fromServer;
+
+};
 
 
 
