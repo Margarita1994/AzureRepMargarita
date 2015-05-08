@@ -14,4 +14,3 @@ someAppOne11object = fromServer;
 return fromServer;
 
 };
-$(document).ready(sun);
