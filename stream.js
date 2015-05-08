@@ -16,4 +16,3 @@ stream.on("data", function(tweet) {
 }
 return tweet.text;
 };
-module.exports = stream;
