@@ -6,7 +6,7 @@ twitter;
 twitter = ntwitter(credentials);
 twitter.stream(
 "statuses/filter",
-{ "track": ["awesome"]}
+{ "track": ["awesome"]});
 
 function(stream) {
 stream.on("data", function(tweet) {
