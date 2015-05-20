@@ -9,11 +9,11 @@ twitter.stream(
 { "track": ["awesome"]},
 
 function(stream) {
-stream.on('data', function(tweet) {
-console.log(tweet.text);
+stream.on('data', function(data) {
+console.log(data.text);
 });
 
 });
-return tweet.text;
+return data.text;
 };
 module.exports = stream;
