@@ -19,37 +19,43 @@ var CommSchema = mongoose.Schema
 
 var com1 = mongoose.model("Comm", CommSchema);
 
-var c1 = new com1{"title":"Doggie", "commentariy":"goodie"});
+var c1 = new com1({"title":"Doggie", "commentariy":"goodie"});
 
-c1.save(function (err) {
+c1.save(function (err) 
+	{
 
-if (err !== null) {
+if (err !== null) 
+		{
 console.log(err);
-} else {
+		} else 
+	{
 console.log("Объект не был сохранен!");
-}
+	}
 
 });
 
-c1.find({"title" : "bad"}, function (err, comments) {
+c1.find({"title" : "bad"}, function (err, comments) 
+	{
 
-comments.forEach(function (com) {
+comments.forEach(function (com) 
+		{
 com.commentariy = "the best!";
 
-com.save(function (err) {
+com.save(function (err) 
+			{
 
-if (err) {
+	if (err)	{
 
 
 console.log(err);
 
-}
+				}
 
-});
+			});
 
-});
+		});
 
-});
+	});
 
 var coolObject = {my: 12345};
 var toDos = [];
@@ -60,13 +66,15 @@ app.use(express.static(__dirname + "/client"));
 // создадим HTTP-сервер на базе Express
 http.createServer(app).listen(port);
 
-app.get("/someway.json", function (req, res) {
+app.get("/someway.json", function (req, res)
+{
 res.json(stream);
 });
 
 
 app.use(express.bodyParser());
-app.post("/todos", function (req, res) {
+app.post("/todos", function (req, res) 
+{
   // сейчас объект сохраняется в req.body
   var newToDo = req.body;
   console.log(newToDo);
