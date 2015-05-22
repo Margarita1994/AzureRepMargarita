@@ -34,7 +34,7 @@ console.log("Объект не был сохранен!");
 
 });
 
-c1.find({"title" : "bad"}, function (err, comments) 
+com1.find({"title" : "bad"}, function (err, comments) 
 	{
 
 comments.forEach(function (com) 
