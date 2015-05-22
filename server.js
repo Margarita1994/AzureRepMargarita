@@ -22,14 +22,15 @@ var com1 = mongoose.model("Comm", CommSchema);
 var c1 = new com1({"title":"Doggie", "commentariy":"goodie"});
 
 c1.save(function (err) 
-	{
+{
 
 if (err !== null) 
 		{
 console.log(err);
+console.log("Объект не был сохранен!");
 		} else 
 	{
-console.log("Объект не был сохранен!");
+console.log("Объект был сохранен!");
 	}
 
 });
@@ -44,7 +45,8 @@ com.commentariy = "the best!";
 com.save(function (err) 
 			{
 
-	if (err)	{
+	if (err)	
+				{
 
 
 console.log(err);
@@ -57,14 +59,14 @@ console.log(err);
 
 	});
 
-com1.remove({"title":"Doggie", "commentariy":"goodie"}, function(err)
+/*com1.remove({"title":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
 	{
 		console.log(err);
 	}
 });
-
+*/
 var coolObject = {my: 12345};
 var toDos = [];
 
