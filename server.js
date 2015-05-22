@@ -19,7 +19,7 @@ var CommSchema = mongoose.Schema
 
 var com1 = mongoose.model("Comm", CommSchema);
 
-var c1 = new Comm({"title":"Doggie", "commentariy":"goodie"});
+var c1 = new com1{"title":"Doggie", "commentariy":"goodie"});
 
 c1.save(function (err) {
 
@@ -31,7 +31,7 @@ console.log("Объект не был сохранен!");
 
 });
 
-Comm.find({"title" : "bad"}, function (err, comments) {
+c1.find({"title" : "bad"}, function (err, comments) {
 
 comments.forEach(function (com) {
 com.commentariy = "the best!";
