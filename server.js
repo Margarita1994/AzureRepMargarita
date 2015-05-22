@@ -86,15 +86,14 @@ res.json(stream);
 
  var ToDB = function (newId, newComment)
  		{
- 			var com1 =  { "Id" : newId, "Comment" : $newComment };
+ 			var com1 =  { "Id" : newId, "Comment" : newComment };
  			com1.save(function (err) 
 {
 
-if (err !== null) 
-		{
+if (err !== null) {
 console.log(err);
-console.log("Объект не был сохранен!");
-		} else 
+		}
+		else 
 	{
 console.log("Объект был сохранен!");
 	}
