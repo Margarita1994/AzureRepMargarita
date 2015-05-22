@@ -59,14 +59,14 @@ console.log(err);
 
 	});
 
-/*com1.remove({"title":"Doggie", "commentariy":"goodie"}, function(err)
+com1.remove({"title":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
 	{
 		console.log(err);
 	}
 });
-*/
+
 var coolObject = {my: 12345};
 var toDos = [];
 
