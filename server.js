@@ -11,7 +11,7 @@ mongoose.connect(connectionString);
 var CommSchema = mongoose.Schema
 ({
 
-"title" : String,
+"id" : String,
 
 "commentariy" : String
 
@@ -19,23 +19,23 @@ var CommSchema = mongoose.Schema
 
 var com1 = mongoose.model("Comm", CommSchema);
 
-var c1 = new com1({"title":"Doggie", "commentariy":"goodie"});
+// var c1 = new com1({"id":"Doggie", "commentariy":"goodie"});
 
-c1.save(function (err) 
-{
+// c1.save(function (err) 
+// {
 
-if (err !== null) 
-		{
-console.log(err);
-console.log("Объект не был сохранен!");
-		} else 
-	{
-console.log("Объект был сохранен!");
-	}
+// if (err !== null) 
+// 		{
+// console.log(err);
+// console.log("Объект не был сохранен!");
+// 		} else 
+// 	{
+// console.log("Объект был сохранен!");
+// 	}
 
-});
+// });
 
-com1.find({"title" : "bad"}, function (err, comments) 
+com1.find({"id" : "bad"}, function (err, comments) 
 	{
 
 comments.forEach(function (com) 
@@ -59,7 +59,7 @@ console.log(err);
 
 	});
 
-com1.remove({"title":"Doggie", "commentariy":"goodie"}, function(err)
+com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
 	{
@@ -82,6 +82,30 @@ res.json(stream);
 });
 
 
+
+
+ var ToDB = function (newId, newComment)
+ 		{
+ 			var com1 =  { "Id" : newId, "Comment" : $newComment }
+ 			com1.save( (function (err) 
+{
+
+if (err !== null) 
+		{
+console.log(err);
+console.log("Объект не был сохранен!");
+		} else 
+	{
+console.log("Объект был сохранен!");
+	}
+}
+
+
+););
+ 		};
+
+
+
 app.use(express.bodyParser());
 app.post("/todos", function (req, res) 
 {
@@ -89,6 +113,7 @@ app.post("/todos", function (req, res)
   var newToDo = req.body;
   console.log(newToDo);
   toDos.push(newToDo);
+  ToDB(newToDo.Id, newToDo.Comment);
   // отправляем простой объект
   res.json({"message":"Вы разместили данные на сервере!"});
 });
