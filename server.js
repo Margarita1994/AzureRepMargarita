@@ -114,6 +114,6 @@ app.post("/todos", function (req, res)
   toDos.push(newToDo);
   ToDB(newToDo.Id, newToDo.Comment);
   // отправляем простой объект
-  res.json({"message":"Вы разместили данные на сервере!"});
+  res.json({'"message":"Вы разместили данные на сервере!"'});
 });
 

@@ -28,11 +28,11 @@ setInterval(function ()
 
 var Clake = function() 
 {
-	$.post("/todos", someObject, function (response) 
+	$.post("todos", someObject, function (data) 
 	{
     // это обратный вызов, выполняется при ответе сервера
     console.log("Получение данных с сервера");
-    console.log(response);
+    console.log(data);
     });
 };
 
@@ -167,7 +167,7 @@ Clake();
 	    $(".comment-input input").val("");
 	    var jsonString = { "Id" : $IMGcom, "Comment" : $comms };
 	var jsonString2 = JSON.stringify(jsonString);
-	console.log(jsonString2);
+	//console.log(jsonString2);
 	}
 };
 
