@@ -8,12 +8,12 @@ var mongoose= require('mongoose');
 var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 mongoose.connect(connectionString);
 
-var CommSchema = mongoose.Schema
+var CommSchema = new mongoose.Schema
 ({
 
-"id" : String,
+id : String,
 
-"commentariy" : String
+commentariy : String
 
 });
 
