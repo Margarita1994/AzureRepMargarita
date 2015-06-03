@@ -15,7 +15,7 @@ var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
 "tags=dogs&format=json&jsoncallback=?";
 var someAppOne11object;
 
-var someObject ={};
+var someObject;
 
 setInterval(function () 
 {
@@ -30,7 +30,7 @@ var Clake = function()
 {
 	    console.log(someObject);
 	        console.log(typeof(someObject));
-	        
+
 	$.post("todos", someObject, function (data) 
 	{
     // это обратный вызов, выполняется при ответе сервера
