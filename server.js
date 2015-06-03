@@ -8,6 +8,9 @@ var mongoose= require('mongoose');
 var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 mongoose.connect(connectionString);
 
+
+app.use(express.bodyParser());
+
 var CommSchema = new mongoose.Schema
 ({
 
@@ -35,7 +38,9 @@ var com1 = mongoose.model("Comm", CommSchema);
 
 // });
 
-com1.find({"id" : "bad"}, function (err, comments) 
+
+ var cf = function () {
+ 	com1.find({"id" : "bad"}, function (err, comments) 
 	{
 
 comments.forEach(function (com) 
@@ -58,14 +63,14 @@ console.log(err);
 		});
 
 	});
-
-com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
+};
+/*com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
 	{
 		console.log(err);
 	}
-});
+});*/
 
 var coolObject = {my: 12345};
 var toDos = [];
@@ -105,15 +110,14 @@ console.log("Объект был сохранен!");
 
 
 
-app.use(express.bodyParser());
 app.post("/todos", function (req, res) 
 {
   // сейчас объект сохраняется в req.body
   var newToDo = req.body;
   console.log(newToDo);
-  toDos.push(newToDo);
-  ToDB(newToDo.Id, newToDo.Comment);
+ 
+  //ToDB(newToDo.Id, newToDo.Comment);
   // отправляем простой объект
-  res.json({'"message":"Вы разместили данные на сервере!"'});
+  res.json(newToDo);
 });
 
