@@ -116,8 +116,8 @@ app.post("/todos", function (req, res)
   var newToDo = req.body;
   console.log(newToDo);
  
-  ToDB(newToDo.id, newToDo.comment);
+ // ToDB(newToDo.id, newToDo.comment);
   // отправляем простой объект
-  res.json(newToDo);
+  res.json(newToDo.id);
 });
 
