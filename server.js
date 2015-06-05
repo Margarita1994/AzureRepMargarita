@@ -83,7 +83,7 @@ http.createServer(app).listen(port);
 
 app.get("/someway.json", function (req, res)
 {
-res.json(stream);
+res.json("stream");
 });
 
 
