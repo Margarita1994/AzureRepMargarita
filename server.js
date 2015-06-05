@@ -87,7 +87,7 @@ http.createServer(app).listen(port);
 app.get("/someway.json", function (req, res)
 {
 	var jhjhn = cf();
-res.json(jhjhn);
+res.json("jhjhn");
 });
 
 
