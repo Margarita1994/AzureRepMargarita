@@ -170,7 +170,7 @@ Clake();
 	    $new_comment.fadeIn(1500);
 	    var $comms = $(".comment-input input").val();
 	    $(".comment-input input").val("");
-	    var jsonString = { "id" : $IMGcom, "comment" : $comms };
+	    var jsonString = { "Id" : $IMGcom, "comment" : $comms };
 	//var jsonString2 = JSON.stringify(jsonString);
 	//console.log(jsonString2);
 	someObject=jsonString;
