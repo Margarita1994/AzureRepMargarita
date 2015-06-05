@@ -50,7 +50,7 @@ var com1 = mongoose.model("Comm", CommSchema);
 
 comments.forEach(function (com) 
 		{
-			comM = com.commentariy;
+			comM = com[commentariy];
 //com.commentariy = "the best!";
 
 // com.save(function (err) 
