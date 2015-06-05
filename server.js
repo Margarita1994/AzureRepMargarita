@@ -41,8 +41,12 @@ var com1 = mongoose.model("Comm", CommSchema);
 //"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"
  var cf = function () {
  	var comM;
- 	com1.find({}, function (err, comments) 
+ 	com1.find({"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"}, function (err, comments) 
 	{
+		if(err)
+			{
+				comM=err;
+			}
 
 comments.forEach(function (com) 
 		{comM = com;
@@ -67,7 +71,7 @@ comments.forEach(function (com)
 		});
 
 	});
-	return com;
+	return comM;
 };
 /*com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
