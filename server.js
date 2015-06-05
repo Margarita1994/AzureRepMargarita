@@ -44,7 +44,7 @@ var com1 = mongoose.model("Comm", CommSchema);
 	{
 
 comments.forEach(function (com) 
-		{
+		{return com;
 com.commentariy = "the best!";
 
 com.save(function (err) 
@@ -58,7 +58,7 @@ console.log(err);
 
 				}
 				else {
-					return com;}
+					}
 
 
 			});
