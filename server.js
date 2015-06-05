@@ -1,6 +1,6 @@
 var express = require("express"),
 app = express(),
-stream = require("./stream.js"),
+//stream = require("./stream.js"),
 http = require("http"),
 port = process.env.PORT || 1337;
 
@@ -116,7 +116,7 @@ app.post("/todos", function (req, res)
   var newToDo = req.body;
   console.log(newToDo);
  
-  //ToDB(newToDo.id, newToDo.comment);
+  ToDB(newToDo.id, newToDo.comment);
   // отправляем простой объект
   res.json(newToDo);
 });
