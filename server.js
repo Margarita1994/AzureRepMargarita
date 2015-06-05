@@ -40,7 +40,7 @@ var com1 = mongoose.model("Comm", CommSchema);
 
 
  var cf = function () {
- 	com1.find({"id" : "bad"}, function (err, comments) 
+ 	com1.find({"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"}, function (err, comments) 
 	{
 
 comments.forEach(function (com) 
@@ -57,6 +57,8 @@ com.save(function (err)
 console.log(err);
 
 				}
+				else {
+					return com; }
 
 			});
 
@@ -83,7 +85,7 @@ http.createServer(app).listen(port);
 
 app.get("/someway.json", function (req, res)
 {
-res.json("stream");
+res.json(cf());
 });
 
 
