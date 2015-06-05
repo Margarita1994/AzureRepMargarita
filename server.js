@@ -91,7 +91,7 @@ res.json("stream");
 
  var ToDB = function (newId, newComment)
  		{
- 			var com11 = new com1  { "id" : newId, "commentariy" : newComment };
+ 			var com11 = new com1  ({"id" : newId, "commentariy" : newComment });
  			com11.save(function (err, result) 
 {
 
