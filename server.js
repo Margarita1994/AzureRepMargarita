@@ -58,8 +58,8 @@ console.log(err);
 
 				}
 				else {
-					return com;
-					console.log("вернули"); }
+					return com;}
+
 
 			});
 
