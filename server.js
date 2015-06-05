@@ -38,34 +38,36 @@ var com1 = mongoose.model("Comm", CommSchema);
 
 // });
 
-
+//"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"
  var cf = function () {
- 	com1.find({"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"}, function (err, comments) 
+ 	var comM;
+ 	com1.find({}, function (err, comments) 
 	{
 
 comments.forEach(function (com) 
-		{return com;
-com.commentariy = "the best!";
+		{comM = com;
+//com.commentariy = "the best!";
 
-com.save(function (err) 
-			{
+// com.save(function (err) 
+// 			{
 
-	if (err)	
-				{
-
-
-console.log(err);
-
-				}
-				else {
-					}
+// 	if (err)	
+// 				{
 
 
-			});
+// console.log(err);
+
+// 				}
+// 				else {
+// 					}
+
+
+// 			});
 
 		});
 
 	});
+	return com;
 };
 /*com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
