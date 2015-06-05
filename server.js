@@ -49,7 +49,8 @@ var com1 = mongoose.model("Comm", CommSchema);
 			}
 
 comments.forEach(function (com) 
-		{comM = com.commentariy;
+		{
+			comM = com.commentariy;
 //com.commentariy = "the best!";
 
 // com.save(function (err) 
@@ -73,6 +74,7 @@ comments.forEach(function (com)
 	});
 	return comM;
 };
+function ca () {return "sdjf";}
 /*com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
@@ -92,7 +94,7 @@ http.createServer(app).listen(port);
 
 app.get("/someway.json", function (req, res)
 {
-	var jhjhn = cf();
+	var jhjhn = ca();
 res.json(jhjhn);
 });
 
