@@ -39,8 +39,8 @@ var com1 = mongoose.model("Comm", CommSchema);
 // });
 
 //"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"
- var cf = function () {
- 	var comM;
+ function cf () {
+ 	var comM = "sssss";
  	com1.find({"id" : "http://farm1.staticflickr.com/543/17860695134_457dc23186_m.jpg"}, function (err, comments) 
 	{
 		if(err)
@@ -74,7 +74,7 @@ comments.forEach(function (com)
 	});
 	return comM;
 };
-function ca () {return "sdjf";}
+//function ca () {return "sdjf";}
 /*com1.remove({"id":"Doggie", "commentariy":"goodie"}, function(err)
 {
 	if(err!== null)
@@ -94,7 +94,7 @@ http.createServer(app).listen(port);
 
 app.get("/someway.json", function (req, res)
 {
-	var jhjhn = ca();
+	var jhjhn = cf();
 res.json(jhjhn);
 });
 
